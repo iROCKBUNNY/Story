@@ -12,14 +12,13 @@ author_url: http://irockbunny.com
 organization: TEELAB
 organization_url: http://teelab.net
 description: iROCKBUNNY Story
-keywords: 生活, 读书, 新知, 博客, iROCKBUNNY, Story, Blog
+keywords: iROCKBUNNY, Story, Blog, 生活, 读书, 新知, 博客, 睡前故事
 url: http://story.irockbunny.com
 contact: contact[at]irockbunny[dot]com
 
 logo: /images/logo.png
 avatar: /images/avatar.jpg
 
-markdown: kramdown
 permalink: /post/:year/:month/:day/:title
 
 gems:
