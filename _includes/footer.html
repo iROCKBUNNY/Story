@@ -1,5 +1,9 @@
 <div class="ui basic vertical footer segment">
     <div class="ui center aligned text container">
-        <div>&copy; {{ site.time | date: "%Y" }} {{ site.organization }}</div>
+        <div class="ui horizontal link list">
+            <a class="item" href="{{ site.organization_url }}" target="_blank">&copy; {{ site.time | date: "%Y" }} {{ site.organization }}</a>
+            <a class="item" href="{{ site.author_url }}" target="_blank">{{ site.author }}</a>
+            <a class="item" href="https://saythanks.io/to/{{ site.author }}" target="_blank">Say Thanks</a>
+        </div>
     </div>
 </div>
