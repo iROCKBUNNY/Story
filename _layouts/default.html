@@ -14,7 +14,9 @@
     {% include analytics.html %}
 </head>
 <body>
+    {% include header.html %}
     {{ content }}
+    {% include footer.html %}
     <script type="text/javascript" src="//unpkg.com/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="//unpkg.com/semantic-ui/dist/semantic.min.js"></script>
     <script type="text/javascript" src="{{ '/assets/js/customize.js' | relative_url }}"></script>
