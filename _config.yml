@@ -1,3 +1,38 @@
-name: 生活 · 读书 · 新知 | iROCKBUNNY Story
+analytics:
+  google:
+    id: UA-33449675-2
+
+repository: https://github.com/iROCKBUNNY/iRB-Story
+
+timezone: Asia/Shanghai
+
+name: 生活 · 读书 · 新知
+author: iROCKBUNNY
+author_url: http://irockbunny.com
+organization: TEELAB
+organization_url: http://teelab.net
+description: iROCKBUNNY Story
+keywords: 生活, 读书, 新知, 博客, iROCKBUNNY, Story, Blog
+url: http://story.irockbunny.com
+contact: contact[at]irockbunny[dot]com
+
+logo: /images/logo.png
+avatar: /images/avatar.jpg
+
 markdown: kramdown
-permalink: /article/:year/:month/:day/:title
+permalink: /post/:year/:month/:day/:title
+
+gems:
+- jekyll-seo-tag
+- jekyll-sitemap
+
+exclude:
+- .gitignore
+- .travis.yml
+- LICENSE
+- README.md
+- CNAME
+- Gemfile
+- Gemfile.lock
+- script
+- vendor
