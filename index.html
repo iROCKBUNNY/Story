@@ -12,7 +12,7 @@ layout: default
             <p><a href="{{ post.url }}">Keep reading...</a></p>
         </div>
         <div class="ui center aligned post-meta text container">
-            <div class="text-grey"><i class="calendar outline icon"></i>{{ post.date | date_to_long_string }}</div>
+            <div class="text-grey"><i class="calendar outline icon"></i>{{ post.date | date_to_string }}</div>
             {% if post.tags.size > 0 %}
                 <div class="ui horizontal link list">
                     <div class="item"><i class="tags icon"></i></div>
