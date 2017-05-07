@@ -12,14 +12,22 @@
     padding: 2em 0em;
 }
 
-.post-excerpt div {
+.ui.post-excerpt.text.container {
     padding: 1em 0em;
     font-size: 1rem;
 }
-.post-excerpt p {
+.ui.post-excerpt.text.container p {
     text-indent: 2em;
 }
-.post-meta div{
+
+.ui.post-content.text.container {
+    padding: 2em 0em;
+}
+.ui.post-content.text.container p {
+    text-indent: 2em;
+}
+
+.ui.post-meta.text.container div{
     font-size: 1rem;
 }
 
