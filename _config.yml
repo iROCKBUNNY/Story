@@ -24,7 +24,6 @@ permalink: /post/:year/:month/:day/:title
 gems:
 - jekyll-seo-tag
 - jekyll-sitemap
-# - jekyll-admin
 
 exclude:
 - .gitignore
