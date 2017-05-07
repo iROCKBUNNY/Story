@@ -27,8 +27,23 @@
     text-indent: 2em;
 }
 
+.ui.post-excerpt.text.container blockquote p,
+.ui.post-content.text.container blockquote p {
+    color: #A5673F;
+}
+
 .ui.post-meta.text.container div{
     font-size: 1rem;
+}
+
+.ui.error.header {
+    font-size: 8em;
+}
+
+@media only screen and (max-width: 767px) {
+    .ui.error.header {
+        font-size: 4em;
+    }
 }
 
 /* text colors */
