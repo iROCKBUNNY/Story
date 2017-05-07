@@ -15,8 +15,7 @@ layout: default
             <div class="text-grey"><i class="calendar outline icon"></i>{{ post.date | date_to_string }}</div>
             {% if post.tags.size > 0 %}
                 <div class="ui horizontal link list">
-                    <div class="item"><i class="tags icon"></i></div>
-                    {% for tag in post.tags %}<div class="item">#{{ tag }}</div>{% endfor %}
+                    {% for tag in post.tags %}<div class="item"><i class="tag icon"></i>{{ tag }}</div>{% endfor %}
                 </div>
             {% endif %}
         </div>
