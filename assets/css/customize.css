@@ -16,20 +16,21 @@
     padding: 1em 0em;
     font-size: 1rem;
 }
-.ui.post-excerpt.text.container p {
-    text-indent: 2em;
-}
-
 .ui.post-content.text.container {
     padding: 2em 0em;
 }
-.ui.post-content.text.container p {
+
+.ui.text.container p {
     text-indent: 2em;
 }
-
-.ui.post-excerpt.text.container blockquote p,
-.ui.post-content.text.container blockquote p {
-    color: #A5673F;
+.ui.text.container blockquote {
+    color: #767676;
+    font-style: italic;
+    padding: 0 1em;
+    border-left: 0.25em solid #DCDDDE;
+}
+.ui.text.container blockquote p {
+    text-indent: 0;
 }
 
 .ui.post-meta.text.container div{
