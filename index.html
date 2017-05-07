@@ -27,7 +27,23 @@ layout: default
     <div class="ui center aligned text container">
         <div class="ui horizontal link list">
             {% if paginator.previous_page %}<a class="item" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">Prev</a>{% endif %}
-            {% for page in (1..paginator.total_pages) %}
+            {% if paginator.total_pages > 10 %}
+                {% assign page_margin_right = paginator.total_pages | minus: 4 %}
+                {% if paginator.page <= 6 %}
+                    {% assign page_start = 1 %}
+                    {% assign page_end = 10 %}
+                {% elsif paginator.page < page_margin_right %}
+                    {% assign page_start = paginator.page | minus: 5 %}
+                    {% assign page_end = paginator.page | plus: 4 %}
+                {% else %}
+                    {% assign page_start = paginator.total_pages | minus: 9 %}
+                    {% assign page_end = paginator.total_pages %}
+                {% endif %}
+            {% else %}
+                {% assign page_start = 1 %}
+                {% assign page_end = paginator.total_pages %}
+            {% endif %}
+            {% for page in (page_start..page_end) %}
                 {% if page == paginator.page %}
                     <div class="item">[{{ page }}]</div>
                 {% elsif page == 1 %}
