@@ -5,11 +5,11 @@ layout: default
 {% for post in site.posts %}
     <div class="ui basic vertical post segment">
         <div class="ui center aligned post-title text container">
-            <a class="ui header" href="{{ post.url }}">{{ post.title }}</a>
+            <a class="ui header" href="{{ post.url }}.html">{{ post.title }}</a>
         </div>
         <div class="ui post-excerpt text container">
             {{ post.excerpt }}
-            <p><a href="{{ post.url }}">Keep reading...</a></p>
+            <p><a href="{{ post.url }}.html">Keep reading...</a></p>
         </div>
         <div class="ui center aligned post-meta text container">
             <div class="text-grey"><i class="calendar outline icon"></i>{{ post.date | date_to_long_string }}</div>
