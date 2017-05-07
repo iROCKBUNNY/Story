@@ -1,8 +1,20 @@
 ---
 layout: default
 ---
-<div class="ui basic vertical segment">
-    <div class="ui text container">
-        Coming soon...
+{% for post in site.posts %}
+    <div class="ui basic vertical post segment">
+        <div class="ui center aligned text post-title container">
+            <a class="ui header" href="{{ post.url }}">{{ post.title }}</a>
+        </div>
+        <div class="ui text post-excerpt container">
+            <div>{{ post.excerpt }}</div>
+        </div>
+        <div class="ui center aligned text post-meta container">
+            <div class="text-grey"><i class="calendar outline icon"></i>{{ post.date | date_to_long_string }}</div>
+            <div class="ui horizontal link list">
+                <div class="item"><i class="tags icon"></i></div>
+                {% for category in post.categories %}<a class="item">#{{ category }}</a>{% endfor %}
+            </div>
+        </div>
     </div>
-</div>
+{% endfor %}
