@@ -21,8 +21,8 @@ avatar: /images/avatar.jpg
 
 permalink: /article/:year/:month/:day/:title.html
 
-paginate: 10
-paginate_path: "/article/page:num/"
+paginate: 5
+paginate_path: "/articles/page:num/"
 
 gems:
 - jekyll-paginate
