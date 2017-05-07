@@ -19,7 +19,7 @@ contact: contact[at]irockbunny[dot]com
 logo: /images/logo.png
 avatar: /images/avatar.jpg
 
-permalink: /post/:year/:month/:day/:title
+permalink: /post/:year/:month/:day/:title.html
 
 gems:
 - jekyll-seo-tag
