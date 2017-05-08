@@ -26,7 +26,6 @@ layout: default
 <div class="ui basic vertical pagination segment">
     <div class="ui center aligned text container">
         <div class="ui horizontal link list">
-            {% if paginator.previous_page %}<a class="item" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">Prev</a>{% endif %}
             {% if paginator.total_pages > 10 %}
                 {% assign page_margin_right = paginator.total_pages | minus: 4 %}
                 {% if paginator.page <= 6 %}
@@ -39,9 +38,26 @@ layout: default
                     {% assign page_start = paginator.total_pages | minus: 9 %}
                     {% assign page_end = paginator.total_pages %}
                 {% endif %}
+                {% if page_start > 1 %}
+                    {% assign show_first_page = true %}
+                    {% assign page_start = page_start | plus: 2 %}
+                {% else %}
+                    {% assign show_first_page = false %}
+                {% endif %}
+                {% if page_end < paginator.total_pages %}
+                    {% assign show_last_page = true %}
+                    {% assign page_end = page_end | minus: 2 %}
+                {% else %}
+                    {% assign show_last_page = false %}
+                {% endif %}
             {% else %}
                 {% assign page_start = 1 %}
                 {% assign page_end = paginator.total_pages %}
+            {% endif %}
+            {% if paginator.previous_page %}<a class="item" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"><i class="fa fa-chevron-left fa-fw"></i></a>{% endif %}
+            {% if show_first_page %}
+                <a class="item" href="{{ '/' | relative_url }}">1</a>
+                <div class="item"><i class="fa fa-ellipsis-h fa-fw"></i></div>
             {% endif %}
             {% for page in (page_start..page_end) %}
                 {% if page == paginator.page %}
@@ -52,7 +68,11 @@ layout: default
                     <a class="item" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
                 {% endif %}
             {% endfor %}
-            {% if paginator.next_page %}<a class="item" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next</a>{% endif %}
+            {% if show_last_page %}
+                <div class="item"><i class="fa fa-ellipsis-h fa-fw"></i></div>
+                <a class="item" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', paginator.total_pages }}">{{ paginator.total_pages }}</a>
+            {% endif %}
+            {% if paginator.next_page %}<a class="item" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"><i class="fa fa-chevron-right fa-fw"></i></a>{% endif %}
         </div>
     </div>
 </div>
