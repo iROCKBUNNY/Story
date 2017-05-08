@@ -22,7 +22,7 @@ avatar: /images/avatar.jpg
 permalink: /article/:year/:month/:day/:title.html
 
 paginate: 5
-paginate_path: "/articles/page:num/"
+paginate_path: "/articles/:num/"
 
 gems:
 - jekyll-paginate
