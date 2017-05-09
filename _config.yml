@@ -32,7 +32,7 @@ gems:
 exclude:
 - .gitignore
 - .travis.yml
-- LICENSE
+- LICENSE.md
 - README.md
 - CNAME
 - Gemfile
