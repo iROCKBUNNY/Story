@@ -24,7 +24,7 @@ permalink: /article/:year/:month/:day/:title.html
 paginate: 5
 paginate_path: "/articles/:num/"
 
-gems:
+plugins:
 - jekyll-paginate
 - jekyll-seo-tag
 - jekyll-sitemap
