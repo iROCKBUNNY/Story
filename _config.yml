@@ -5,6 +5,7 @@ analytics:
 repository: https://github.com/iROCKBUNNY/iRB-Story
 
 timezone: Asia/Shanghai
+lang: zh_CN
 
 name: 生活 · 读书 · 新知
 author: iROCKBUNNY
