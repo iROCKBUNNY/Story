@@ -7,16 +7,19 @@ repository: https://github.com/iROCKBUNNY/iRB-Story
 timezone: Asia/Shanghai
 lang: zh_CN
 
-name: 生活 · 读书 · 新知
+title: 生活 · 读书 · 新知
+description: iROCKBUNNY Story
+keywords: iROCKBUNNY, Story, Blog, 生活, 读书, 新知, 博客, 睡前故事
+url: http://story.irockbunny.com
+
 author: iROCKBUNNY
 author_url: http://irockbunny.com
 organization: TEELAB
 organization_url: http://teelab.net
-description: iROCKBUNNY Story
-keywords: iROCKBUNNY, Story, Blog, 生活, 读书, 新知, 博客, 睡前故事
-url: http://story.irockbunny.com
+
 contact: contact[at]irockbunny[dot]com
 
+image: /images/logo.png
 logo: /images/logo.png
 avatar: /images/avatar.jpg
 
