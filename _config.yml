@@ -25,6 +25,8 @@ avatar: /images/avatar.jpg
 
 permalink: /article/:year/:month/:day/:title/
 
+excerpt_separator: <!--more-->
+
 paginate: 5
 paginate_path: /articles/:num/
 
