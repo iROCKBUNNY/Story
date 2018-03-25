@@ -2,7 +2,7 @@
 layout: default
 ---
 
-{% for post in paginator.posts %}
+{%- for post in paginator.posts -%}
     <div class="ui basic vertical post segment">
         <div class="ui center aligned post-title text container">
             <a class="ui header" href="{{ post.url | relative_url }}">{{ post.title }}</a>
@@ -13,67 +13,67 @@ layout: default
         </div>
         <div class="ui center aligned post-meta text container">
             <div class="text-grey"><i class="calendar outline icon"></i>{{ post.date | date_to_string }}</div>
-            {% if post.tags.size > 0 %}
+            {%- if post.tags.size > 0 -%}
                 <div class="ui horizontal link list">
                     {% for tag in post.tags %}<div class="item"><i class="tag icon"></i>{{ tag }}</div>{% endfor %}
                 </div>
-            {% endif %}
+            {%- endif -%}
         </div>
     </div>
-{% endfor %}
+{%- endfor -%}
 
-{% if paginator.total_pages > 1 %}
+{%- if paginator.total_pages > 1 -%}
     <div class="ui basic vertical pagination segment">
         <div class="ui center aligned text container">
             <div class="ui horizontal link list">
-                {% if paginator.total_pages > 10 %}
-                    {% assign page_margin_right = paginator.total_pages | minus: 4 %}
-                    {% if paginator.page <= 6 %}
-                        {% assign page_start = 1 %}
-                        {% assign page_end = 10 %}
-                    {% elsif paginator.page < page_margin_right %}
-                        {% assign page_start = paginator.page | minus: 5 %}
-                        {% assign page_end = paginator.page | plus: 4 %}
-                    {% else %}
-                        {% assign page_start = paginator.total_pages | minus: 9 %}
-                        {% assign page_end = paginator.total_pages %}
-                    {% endif %}
-                    {% if page_start > 1 %}
-                        {% assign show_first_page = true %}
-                        {% assign page_start = page_start | plus: 2 %}
-                    {% else %}
-                        {% assign show_first_page = false %}
-                    {% endif %}
-                    {% if page_end < paginator.total_pages %}
-                        {% assign show_last_page = true %}
-                        {% assign page_end = page_end | minus: 2 %}
-                    {% else %}
-                        {% assign show_last_page = false %}
-                    {% endif %}
-                {% else %}
-                    {% assign page_start = 1 %}
-                    {% assign page_end = paginator.total_pages %}
-                {% endif %}
+                {%- if paginator.total_pages > 10 -%}
+                    {%- assign page_margin_right = paginator.total_pages | minus: 4 -%}
+                    {%- if paginator.page <= 6 -%}
+                        {%- assign page_start = 1 -%}
+                        {%- assign page_end = 10 -%}
+                    {%- elsif paginator.page < page_margin_right -%}
+                        {%- assign page_start = paginator.page | minus: 5 -%}
+                        {%- assign page_end = paginator.page | plus: 4 -%}
+                    {%- else -%}
+                        {%- assign page_start = paginator.total_pages | minus: 9 -%}
+                        {%- assign page_end = paginator.total_pages -%}
+                    {%- endif -%}
+                    {%- if page_start > 1 -%}
+                        {%- assign show_first_page = true -%}
+                        {%- assign page_start = page_start | plus: 2 -%}
+                    {%- else -%}
+                        {%- assign show_first_page = false -%}
+                    {%- endif -%}
+                    {%- if page_end < paginator.total_pages -%}
+                        {%- assign show_last_page = true -%}
+                        {%- assign page_end = page_end | minus: 2 -%}
+                    {%- else -%}
+                        {%- assign show_last_page = false -%}
+                    {%- endif -%}
+                {%- else -%}
+                    {%- assign page_start = 1 -%}
+                    {%- assign page_end = paginator.total_pages -%}
+                {%- endif -%}
                 {% if paginator.previous_page %}<a class="item" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"><i class="chevron left icon"></i></a>{% endif %}
-                {% if show_first_page %}
+                {%- if show_first_page -%}
                     <a class="item" href="{{ '/' | relative_url }}">1</a>
                     <div class="item"><i class="ellipsis horizontal icon"></i></div>
-                {% endif %}
-                {% for page in (page_start..page_end) %}
-                    {% if page == paginator.page %}
+                {%- endif -%}
+                {%- for page in (page_start..page_end) -%}
+                    {%- if page == paginator.page -%}
                         <div class="item"><i class="circle outline icon"></i></div>
-                    {% elsif page == 1 %}
+                    {%- elsif page == 1 -%}
                         <a class="item" href="{{ '/' | relative_url }}">{{ page }}</a>
-                    {% else %}
+                    {%- else -%}
                         <a class="item" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
-                    {% endif %}
-                {% endfor %}
-                {% if show_last_page %}
+                    {%- endif -%}
+                {%- endfor -%}
+                {%- if show_last_page -%}
                     <div class="item"><i class="ellipsis horizontal icon"></i></div>
                     <a class="item" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', paginator.total_pages }}">{{ paginator.total_pages }}</a>
-                {% endif %}
+                {%- endif -%}
                 {% if paginator.next_page %}<a class="item" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"><i class="chevron right icon"></i></a>{% endif %}
             </div>
         </div>
     </div>
-{% endif %}
+{%- endif -%}

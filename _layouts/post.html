@@ -10,11 +10,11 @@ layout: default
     </div>
     <div class="ui center aligned text post-meta container">
         <div class="text-grey"><i class="calendar outline icon"></i>{{ page.date | date_to_string }}</div>
-        {% if page.tags.size > 0 %}
+        {%- if page.tags.size > 0 -%}
             <div class="ui horizontal link list">
                 {% for tag in page.tags %}<div class="item"><i class="tag icon"></i>{{ tag }}</div>{% endfor %}
             </div>
-        {% endif %}
+        {%- endif -%}
         <div><a href="https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode" target="_blank"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/svg/by-nc-nd.svg" alt="CC4.0 BY-NC-ND"></a></div>
     </div>
 </div>
