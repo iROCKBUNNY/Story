@@ -39,7 +39,7 @@ plugins:
 exclude:
 - .gitignore
 - .travis.yml
-- LICENSE.md
+- LICENSE
 - README.md
 - CNAME
 - Gemfile
