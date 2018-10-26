@@ -9,6 +9,7 @@
 }
 
 .ui.basic.vertical.post.segment,
+.ui.basic.vertical.tag.segment,
 .ui.basic.vertical.pagination.segment {
     padding: 2em 0em;
 }

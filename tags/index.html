@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+{%- for item in site.tags -%}
+    {%- assign tag = item | first -%}
+    {%- assign posts = item | last -%}
+    <div id="{{ tag }}" class="ui basic vertical tag segment">
+        <div class="ui center aligned tag text container">
+            <div class="ui header"><i class="tag icon"></i>{{ tag }} ({{ posts.size }} 篇)</div>
+            <div class="ui link list">
+                {%- for post in posts -%}<a class="item" href="{{ post.url | relative_url }}">《{{ post.title }}》</a>{%- endfor -%}
+            </div>
+        </div>
+    </div>
+{%- endfor -%}
