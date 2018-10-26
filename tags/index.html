@@ -3,8 +3,8 @@ layout: default
 ---
 
 {%- for item in site.tags -%}
-    {%- assign tag = item | first -%}
-    {%- assign posts = item | last -%}
+    {%- assign tag = item[0] -%}
+    {%- assign posts = item[1] -%}
     <div id="{{ tag }}" class="ui basic vertical tag segment">
         <div class="ui center aligned tag text container">
             <div class="ui header"><i class="tag icon"></i>{{ tag }} ({{ posts.size }} 篇)</div>
