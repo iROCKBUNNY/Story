@@ -2,7 +2,7 @@ analytics:
   google:
     id: UA-33449675-2
 
-repository: https://github.com/iROCKBUNNY/iRB-Story
+repository: https://github.com/iROCKBUNNY/Story
 
 timezone: Asia/Shanghai
 lang: zh_CN
