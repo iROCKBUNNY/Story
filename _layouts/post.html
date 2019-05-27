@@ -15,6 +15,6 @@ layout: default
                 {% for tag in page.tags %}<a class="item" href="{{ '/tags/' | relative_url }}#{{ tag }}"><i class="tag icon"></i>{{ tag }}</a>{% endfor %}
             </div>
         {%- endif -%}
-        <div><a href="https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode" target="_blank"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/svg/by-nc-nd.svg" alt="CC4.0 BY-NC-ND"></a></div>
+        <div><a href="https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode" target="_blank"><img src="{{ /images/cc/by-nc-nd.svg | relative_url }}" alt="CC4.0 BY-NC-ND"></a></div>
     </div>
 </div>
